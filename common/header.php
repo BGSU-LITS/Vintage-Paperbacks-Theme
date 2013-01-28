@@ -23,33 +23,33 @@
 		echo head_css();
 	?>
 
-
 	<!-- JS -->
-	<?php
-		queue_js_file('vintage_paperbacks.min');
-		echo head_js();
-	?>
+	<?php echo head_js(false); ?>
 
-	<!--[if lt IE 9]>
-	<?php echo js_tag('html5shiv'); ?>
-	<![endif]-->
 </head>
 <body>
-	<header id="navigation-bar">
-		<h1><?php echo link_to_home_page(option('site_title')); ?></h1>
+	<?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-		<nav class="navigation">
-			<?php echo public_nav_main(); ?>
-		</nav>
+	<div class="container">
+		<div class="row">
+			<header class="span3">
+				<div class="text-center push-down">
+				<?php echo link_to_home_page('<img src="'.img('logo.svg').'" alt="Logo">'); ?>
+				</div>
 
-		<div id="search-box">
-			<form action="<?php echo url('items/browse'); ?>" method="get">
-				<label for="simple-search" class="block embiggen bevel">Search</label>
-				<input type="text" name="search" id="simple-search" value="<?php echo input_get_value('search'); ?>" class="input medium shadow" />
-				<input type="submit" value="Go!" class="button" />
-			</form>
-		</div>
-	</header>
+				<div class="shadow push-down double">
+					<div id="search-box" class="red-velvet">
+						<form action="<?php echo url('items/browse'); ?>" method="get">
+							<label for="simple-search" class="hidden">Search</label>
+							<input type="text" name="search" id="simple-search" value="<?php echo input_get_value('search'); ?>" class="input" />
+							<input type="submit" value="Search" class="button" />
+						</form>
+					</div>
 
-	<section id="content">
-		<?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+					<nav id="site-nav">
+						<?php echo public_nav_main(); ?>
+					</nav>
+				</div>
+			</header>
+
+			<section id="content" class="span9">
