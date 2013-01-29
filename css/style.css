@@ -1002,10 +1002,8 @@ footer {
 
 .book-covers {
   float: right; }
-  .book-covers .gallery {
-    overflow: auto; }
   .book-covers li {
-    float: left;
+    display: inline-block;
     margin-right: 1em; }
   .book-covers li:last-child {
     margin-right: 0; }
@@ -1032,10 +1030,9 @@ footer {
 .pagination {
   margin-top: 2em; }
   .pagination .navigation {
-    overflow: auto;
     margin: 1em 0 0.5em; }
     .pagination .navigation > li {
-      float: left;
+      display: inline-block;
       margin-right: 1em; }
 
 /** Typography
@@ -1066,11 +1063,10 @@ footer {
     border-width: 1px 0; }
 
 .pagination_list {
-  overflow: auto;
   padding-left: 0;
   margin-bottom: 1px; }
   .pagination_list li {
-    float: left;
+    display: inline-block;
     padding: 0.5em 0.75em;
     background-color: #c77966;
     margin-right: 0.5em; }
@@ -1094,7 +1090,7 @@ footer {
     ================ */
 @media (max-width: 400px) {
   #search-box .input {
-    width: 200px; }
+    width: 185px; }
   #search-box .button {
     width: 67px; } }
 @media (max-width: 649px) {
@@ -1107,7 +1103,8 @@ footer {
     width: 20%; } }
 @media (max-width: 767px) {
   .gallery [class*="span"] {
-    float: left;
+    float: none;
+    display: inline-block;
     margin-left: 2%; }
   .gallery [class*="span"]:first-child {
     margin-left: 0; } }
