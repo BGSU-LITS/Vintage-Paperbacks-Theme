@@ -48,11 +48,12 @@ h2, h4, h6 {
 				display: block;
 				color: $colorBeige;
 				text-decoration: none;
-				text-shadow: 0 1px 0 rgba(0,0,0,0.65);
+				text-shadow: 1px 3px 0 #000;
 			}
 
 			& > a:hover {
 				background-color: hsla(0, 0%, 100%, 0.1);
+				box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.75) inset;
 			}
 		}
 	}
@@ -98,6 +99,30 @@ footer {
 	}
 }
 
+/** Item - Show
+    ============ */
+.metadata-label {
+	margin-bottom: 0;
+}
+
+
+.book-covers {
+	float: right;
+
+	.gallery {
+		overflow: auto;
+	}
+
+	li {
+		float: left;
+		margin-right: 1em;
+	}
+
+	li:last-child {
+		margin-right: 0;
+	}
+}
+
 /** Styles
     =========== */
 .red-velvet {
@@ -111,6 +136,30 @@ footer {
 .input {
 	padding: 0.25em;
 	font: inherit;
+}
+
+.plain {
+	padding-left: 0;
+	list-style: none;
+}
+
+.headline {
+	margin-top: 0;
+}
+
+.pagination {
+	margin-top: 2em;
+	border-top: 1px dotted $colorBlue;
+
+	.navigation {
+		overflow: auto;
+		margin: 1em 0 0.5em;
+
+		& > li {
+			float: left;
+			margin-right: 1em;
+		}
+	}
 }
 
 /** Typography
@@ -157,6 +206,12 @@ footer {
 		.button {
 			width: 67px;
 		}
+	}
+}
+
+@media (max-width: 649px) {
+	.book-covers {
+		float: none;
 	}
 }
 
