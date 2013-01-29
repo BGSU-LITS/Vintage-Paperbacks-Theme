@@ -17,7 +17,6 @@
 ?>
 	<div class="span3 item">
 		<?php if ($file->hasThumbnail()): ?>
-		<?php var_dump($item); ?>
 		<a href="<?php echo record_url($item, 'show'); ?>">
 			<img src="<?php echo $file->getWebPath('thumbnail'); ?>" alt="Thumbnail" class="shadow-box" />
 		</a>

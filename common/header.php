@@ -24,7 +24,10 @@
 	?>
 
 	<!-- JS -->
-	<?php echo head_js(false); ?>
+	<?php
+		queue_js_file('vintagePaperbacks.min');
+		echo head_js(false);
+	?>
 
 </head>
 <body>

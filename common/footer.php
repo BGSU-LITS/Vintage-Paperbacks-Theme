@@ -13,5 +13,7 @@
 
 	</div>
 
+<script>/* Away we go! */ vintagePaperbacks.init();</script>
+
 </body>
 </html>
