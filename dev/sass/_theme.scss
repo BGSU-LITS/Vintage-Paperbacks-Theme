@@ -99,6 +99,67 @@ footer {
 	}
 }
 
+/** Item - Browse
+    ============== */
+.browse {
+	margin-top: 2em;
+}
+
+.item-image {
+	background-color: #eee;
+	text-align: center;
+	padding: 1em 0;
+	box-shadow: 0 0 8px #999 inset;
+	border-top: 1px solid #fff;
+}
+
+.item:nth-child(odd) {
+	.item-image {
+		background-color: #ccc;
+	}
+}
+
+.item-metadata {
+	padding: 1em 0;
+	border-top: 1px solid #ddd;
+}
+
+#secondary-nav {
+	.navigation {
+		padding-left: 0;
+		margin: 0;
+		border-bottom: 1px solid $colorRed;
+
+		& > li {
+			display: inline-block;
+			margin-left: 1em;
+			border: 1px solid $colorRed;
+
+			@include translate(0, 1px, 0);
+			@include gradient(top, lighten($colorRed, 10%), darken($colorRed, 10%));
+
+			&.active {
+				background-image: none;
+				background-color: #FFF;
+				border-bottom: 1px solid #FFF;
+
+				& > a {
+					color: $colorRed;
+					text-shadow: none;
+				}
+			}
+
+			& > a {
+				text-decoration: none;
+				display: block;
+				padding: 0.5em;
+				color: #fff;
+				text-shadow: 1px 3px 0 #000;
+			}
+		}
+	}
+}
+
 /** Item - Show
     ============ */
 .metadata-label {
@@ -149,7 +210,6 @@ footer {
 
 .pagination {
 	margin-top: 2em;
-	border-top: 1px dotted $colorBlue;
 
 	.navigation {
 		overflow: auto;
@@ -184,6 +244,10 @@ footer {
 	}
 }
 
+.no-margin {
+	margin: 0;
+}
+
 /** Omeka Defaults
     ===================== */
 #admin-bar {
@@ -192,6 +256,24 @@ footer {
 	& > ul {
 		border: 1px solid $colorGray;
 		border-width: 1px 0;
+	}
+}
+
+.pagination_list {
+	overflow: auto;
+	padding-left: 0;
+	margin-bottom: 1px;
+
+	li {
+		float: left;
+		padding: 0.5em 0.75em;
+		background-color: $colorPink;
+		margin-right: 0.5em;
+
+		a {
+			text-decoration: none;
+			color: $colorRed;
+		}
 	}
 }
 
