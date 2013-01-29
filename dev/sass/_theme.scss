@@ -60,7 +60,6 @@ h2, h4, h6 {
 
 #search-box {
 	padding: 0.5em;
-	@include border-box;
 
 	.input {
 		width: 144px;
@@ -144,5 +143,53 @@ footer {
 	& > ul {
 		border: 1px solid $colorGray;
 		border-width: 1px 0;
+	}
+}
+
+/** Responsive
+    ================ */
+@media (max-width: 400px) {
+	#search-box {
+		.input {
+			width: 200px;
+		}
+
+		.button {
+			width: 67px;
+		}
+	}
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+	#search-box {
+		.input {
+			width: 75%;
+		}
+
+		.button {
+			width: 20%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.gallery {
+		[class*="span"] {
+			float: left;
+			margin-left: 2%;
+		}
+
+		[class*="span"]:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	#search-box {
+		.input {
+			width: 93%;
+			margin-bottom: 0.5em;
+		}
 	}
 }
