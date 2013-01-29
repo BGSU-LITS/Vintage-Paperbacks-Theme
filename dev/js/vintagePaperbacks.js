@@ -22,6 +22,18 @@ var vintagePaperbacks = (function($, Modernizr){
 	}
 
 	/**
+	 * Starts a Fancybox Gallery
+	 *
+	 * @param  {string} selector jQuery css selector
+	 */
+	function gallery(selector) {
+		$(selector).fancybox({
+			prevEffect	: 'none',
+			nextEffect	: 'none'
+		});
+	}
+
+	/**
 	function activateMobileNav() {
 		var body = $("body"),
 			btn = $(".mobile-nav-btn");
@@ -36,7 +48,8 @@ var vintagePaperbacks = (function($, Modernizr){
 
 	// And now to the people!
 	return {
-		'init': init
+		'init': init,
+		'gallery': gallery
 	};
 
 })(jQuery, Modernizr);
