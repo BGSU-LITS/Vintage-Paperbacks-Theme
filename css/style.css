@@ -1078,6 +1078,18 @@ footer {
       text-decoration: none;
       color: #703030; }
 
+#search-keywords {
+  margin-top: 1.5em; }
+
+.field {
+  margin-bottom: 1.5em; }
+
+.inputs {
+  font: inherit; }
+
+#advanced-search-form .input {
+  width: 50%; }
+
 /** Responsive
     ================ */
 @media (max-width: 400px) {
