@@ -58,7 +58,21 @@
 	<ul class="metadata plain">
 		<li class="metadata-row">
 			<h4 class="metadata-label"><?php echo __('Tags'); ?></h4>
-			<div class="metadata-value"><?php echo tag_string($item); ?></div>
+			<div class="metadata-value hTagcloud">
+				<ul class="plain tags">
+					<?php
+					foreach ($item->Tags as $tag):
+						$data = array(
+							'tag' => $tag->name,
+							'collection' => $item->collection_id
+						);
+
+						$url = url('items/browse', $data);
+					?>
+					<li class="tag"><a href="<?php echo $url; ?>"><?php echo $tag->name; ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
 		</li>
 	</ul>
 	<?php endif;?>

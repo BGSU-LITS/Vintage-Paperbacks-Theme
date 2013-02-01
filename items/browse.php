@@ -37,8 +37,22 @@
 				<?php endif; ?>
 
 				<?php if (metadata('item', 'has tags')): ?>
-				<div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-					<?php echo tag_string('item'); ?></p>
+				<div class="hTagcloud">
+					<h4><?php echo __('Tags'); ?>:</h4>
+					<ul class="plain tags">
+						<?php
+						foreach ($item->Tags as $tag):
+							$data = array('tag' => $tag->name);
+							if (array_key_exists('collection', $_GET))
+							{
+								$data['collection'] = $_GET['collection'];
+							}
+
+							$url = url('items/browse', $data);
+						?>
+						<li class="tag"><a href="<?php echo $url; ?>"><?php echo $tag->name; ?></a></li>
+						<?php endforeach; ?>
+					</ul>
 				</div>
 				<?php endif; ?>
 
