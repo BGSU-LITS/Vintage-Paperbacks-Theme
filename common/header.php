@@ -45,7 +45,7 @@
 						<form action="<?php echo url('items/browse'); ?>" method="get">
 							<label for="simple-search" class="hidden">Search</label>
 							<input type="text" name="search" id="simple-search" value="<?php echo input_get_value('search'); ?>" class="input" />
-							<input type="submit" value="Search" class="button" />
+							<input type="submit" value="Search" class="button btn-align" />
 						</form>
 					</div>
 

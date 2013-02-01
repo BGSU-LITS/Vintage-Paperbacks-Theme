@@ -1,9 +1,5 @@
 <?php
 /**
- * These hacks are lame...
- */
-
-/**
  * Gets the value for the given $_GET variable.
  *
  * @param  string $name The name of the $_GET variable.

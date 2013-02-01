@@ -2,8 +2,8 @@
 
 		</div>
 		<div class="row">
-			<footer>
-				<div class="text-right">
+			<footer class="shadow">
+				<div class="text-right outline pad">
 					<small><?php echo get_theme_option('footer_text'); ?></small>
 				</div>
 

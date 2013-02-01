@@ -892,7 +892,7 @@ h2, h4, h6 {
   #site-nav .navigation {
     margin: 0;
     padding-left: 0;
-    border: 1px dotted #5c6674; }
+    border: 1px solid #5c6674; }
     #site-nav .navigation > li {
       border-bottom: 1px solid #464d57;
       border-top: 1px solid #020202; }
@@ -914,14 +914,8 @@ h2, h4, h6 {
   padding: 0.5em; }
   #search-box .input {
     width: 144px; }
-  #search-box .button {
-    -webkit-transform: translate3d(0, -1px, 0);
-    -moz-transform: translate3d(0, -1px, 0);
-    -o-transform: translate3d(0, -1px, 0);
-    -ms-transform: translate3d(0, -1px, 0);
-    transform: translate3d(0, -1px, 0); }
   #search-box > form {
-    border: 1px dotted #c77966;
+    border: 1px solid #c77966;
     padding: 0.5em; }
 
 /** Content
@@ -939,9 +933,9 @@ h2, h4, h6 {
     ======== */
 footer {
   margin-top: 2em;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 1em;
-  color: #2f343b; }
+  background-image: url("../images/background_blue.png");
+  padding: 0.5em;
+  color: #b1b3af; }
   footer small {
     font-size: 87.5%; }
 
@@ -1035,6 +1029,24 @@ footer {
       display: inline-block;
       margin-right: 1em; }
 
+.button.alt {
+  background-color: #7e827a; }
+.button.delete {
+  background-color: #900; }
+
+.btn-align {
+  -webkit-transform: translate3d(0, -1px, 0);
+  -moz-transform: translate3d(0, -1px, 0);
+  -o-transform: translate3d(0, -1px, 0);
+  -ms-transform: translate3d(0, -1px, 0);
+  transform: translate3d(0, -1px, 0); }
+
+.outline {
+  border: 1px solid #7e827a; }
+
+.pad {
+  padding: 0.5em; }
+
 /** Typography
     =========== */
 .hidden {
@@ -1085,6 +1097,39 @@ footer {
 
 #advanced-search-form .input {
   width: 50%; }
+#advanced-search-form .search-entry .input {
+  width: 25%;
+  margin-left: 1.5em; }
+
+.search-entry {
+  margin-bottom: 0.5em; }
+  .search-entry select:first-child {
+    margin-right: 1.5em; }
+
+/** Tag Could
+    ============= */
+.hTagcloud ul, .hTagcloud .tags {
+  padding-left: 0;
+  list-style-type: none; }
+  .hTagcloud ul > li, .hTagcloud ul .tag, .hTagcloud .tags > li, .hTagcloud .tags .tag {
+    display: inline-block;
+    margin: 0 16px 16px 0; }
+    .hTagcloud ul > li a, .hTagcloud ul .tag a, .hTagcloud .tags > li a, .hTagcloud .tags .tag a {
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      background-color: green;
+      padding: 0.5em; }
+.hTagcloud .v-popular {
+  font-size: 1.125em; }
+.hTagcloud .vv-popular {
+  font-size: 1.25em; }
+.hTagcloud .vvv-popular {
+  font-size: 1.375em; }
+.hTagcloud .vvvv-popular {
+  font-size: 1.5em; }
+.hTagcloud .vvvvvvvv-popular {
+  font-size: 2em; }
 
 /** Responsive
     ================ */
