@@ -70,11 +70,11 @@ $formAttributes['method'] = 'GET';
                     array('class' => 'input')
                 );
                 ?>
-                <button type="button" class="remove_search" disabled="disabled" style="display: none;">-</button>
+                <button type="button" class="remove_search button delete btn-align" disabled="disabled" style="display: none;">x</button>
             </div>
         <?php endforeach; ?>
         </div>
-        <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
+        <button type="button" class="add_search button alt"><?php echo __('Add a Field'); ?></button>
     </div>
 
     <div id="search-by-range" class="field">
