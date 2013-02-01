@@ -1,6 +1,17 @@
 <?php
 	$pagination = pagination_links();
-	$page_title = isset($_GET['search']) && ! empty($_GET['search']) ? "Search - {$_GET['search']}" : "Browse";
+
+	$page_title = "Browse";
+
+	if (array_key_exists('tag', $_GET))
+	{
+		$page_title .= " Tags: {$_GET['tag']}";
+	}
+
+	if (array_key_exists('search', $_GET))
+	{
+		$page_title = "Search Results: {$_GET['search']}";
+	}
 ?>
 <?php echo head(array('title' => $page_title)); ?>
 
