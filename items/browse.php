@@ -25,14 +25,14 @@
 
 	<div class="browse items">
 	<?php foreach (loop('items') as $item): ?>
-		<div class="item row">
-			<div class="span3 item-image">
+		<div class="item">
+			<div class="item-image">
 				<?php if (metadata('item', 'has thumbnail')): ?>
 					<?php echo link_to_item(item_image('thumbnail', array('class' => 'shadow'))); ?>
 				<?php endif; ?>
 			</div>
 
-			<div class="span9 item-metadata">
+			<div class="item-metadata">
 				<h3 class="no-margin"><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h3>
 
 				<p class="headline author">By: <?php echo metadata('item', array('Dublin Core', 'Creator')); ?></p>

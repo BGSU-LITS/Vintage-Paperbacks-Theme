@@ -944,19 +944,27 @@ footer {
 .browse {
   margin-top: 2em; }
 
-.item-image {
-  background-color: #eee;
-  text-align: center;
-  padding: 1em 0;
-  box-shadow: 0 0 8px #999999 inset;
-  border-top: 1px solid white; }
+.item {
+  display: table;
+  width: 100%; }
+  .item .item-image, .item .item-metadata {
+    display: table-cell;
+    vertical-align: top;
+    padding: 1em; }
+  .item .item-image {
+    width: 25%;
+    background-color: #eee;
+    text-align: center;
+    box-shadow: 0 0 8px #999999 inset;
+    border-top: 1px solid white; }
+  .item .item-metadata {
+    width: 75%;
+    border-top: 1px solid #dddddd; }
+    .item .item-metadata h4 {
+      margin-bottom: 0.25em; }
 
 .item:nth-child(odd) .item-image {
   background-color: #ccc; }
-
-.item-metadata {
-  padding: 1em 0;
-  border-top: 1px solid #dddddd; }
 
 #secondary-nav .navigation {
   padding-left: 0;
@@ -1110,10 +1118,11 @@ footer {
     ============= */
 .hTagcloud ul, .hTagcloud .tags {
   padding-left: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0 auto; }
   .hTagcloud ul > li, .hTagcloud ul .tag, .hTagcloud .tags > li, .hTagcloud .tags .tag {
     display: inline-block;
-    margin: 0 16px 16px 0; }
+    margin: 0 8px 16px 0; }
     .hTagcloud ul > li a, .hTagcloud ul .tag a, .hTagcloud .tags > li a, .hTagcloud .tags .tag a {
       color: #fff;
       display: block;
@@ -1138,6 +1147,16 @@ footer {
     width: 185px; }
   #search-box .button {
     width: 67px; } }
+@media (max-width: 500px) {
+  .item {
+    display: block; }
+    .item .item-metadata, .item .item-image {
+      display: block;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box; } }
 @media (max-width: 649px) {
   .book-covers {
     float: none; } }
